@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(method("_method"));
 
 // Specify the port.
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 // Set Handlebars as the default templating engine.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
